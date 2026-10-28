@@ -1,0 +1,434 @@
+.panel {
+  display: grid;
+  gap: 32px;
+}
+
+.intro {
+  display: grid;
+  gap: 12px;
+  max-width: 40rem;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #535353;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  color: #002856;
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.lede {
+  margin: 0;
+  color: #535353;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.primary,
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 24px;
+  border-radius: 2px;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.primary {
+  border: 2px solid #002856;
+  background: #002856;
+  color: #fff;
+}
+
+.primary:hover:not(:disabled) {
+  border-color: #002045;
+  background: #002045;
+}
+
+.primary:active:not(:disabled) {
+  border-color: #001834;
+  background: #001834;
+}
+
+.secondary {
+  border: 2px solid #002856;
+  background: #fff;
+  color: #002856;
+}
+
+.secondary:hover:not(:disabled) {
+  background: #f4f4f4;
+}
+
+.primary:focus-visible,
+.secondary:focus-visible,
+.textLink:focus-visible {
+  outline: 2px solid #0052d6;
+  outline-offset: 2px;
+}
+
+.primary:disabled,
+.secondary:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.error {
+  margin: 0;
+  padding: 16px;
+  border: 1px solid #de0a01;
+  background: #fce7e6;
+  color: #aa0000;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(260px, 340px) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.details {
+  display: grid;
+  gap: 20px;
+  padding: 24px;
+  border: 1px solid #c3c3c3;
+  background: #fff;
+}
+
+.detailsTitle {
+  margin: 0;
+  color: #002856;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.facts {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+}
+
+.facts div {
+  display: grid;
+  gap: 4px;
+}
+
+.facts dt {
+  color: #535353;
+  font-size: 14px;
+}
+
+.facts dd {
+  margin: 0;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.textLink {
+  color: #0052d6;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.textLink:hover {
+  color: #0042ab;
+}
+
+.nameField {
+  display: grid;
+  gap: 8px;
+}
+
+.nameLabel {
+  color: #535353;
+  font-size: 14px;
+}
+
+.nameInput {
+  min-height: 48px;
+  padding: 12px;
+  border: 1px solid #c3c3c3;
+  border-radius: 2px;
+  font: inherit;
+  font-size: 16px;
+}
+
+.share {
+  display: grid;
+  gap: 8px;
+}
+
+.shareLabel {
+  margin: 0;
+  color: #535353;
+  font-size: 14px;
+}
+
+.shareUrl {
+  margin: 0;
+  padding: 12px;
+  border: 1px solid #c3c3c3;
+  background: #f4f4f4;
+  color: #000;
+  font-size: 14px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.status {
+  margin: 0;
+  color: #535353;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.statusJoined {
+  margin: 0;
+  padding: 12px 16px;
+  background: #e6f6f1;
+  color: #007a50;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 600px;
+  background: #002856;
+}
+
+// The Zoom SDK renders video, screen share and its own toolbar in here.
+.zoomRoot {
+  position: relative;
+  flex: 1;
+  min-height: 540px;
+}
+
+.stageHint {
+  margin: 0;
+  padding: 48px 24px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.shareLabel {
+  position: absolute;
+  z-index: 2;
+  top: 12px;
+  left: 16px;
+  padding: 6px 10px;
+  background: rgb(0 24 52 / 80%);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+// Below the video (not overlaid) so it never covers the Zoom toolbar.
+.controls {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: rgb(0 24 52 / 80%);
+}
+
+.control,
+.controlLeave {
+  min-height: 40px;
+  padding: 8px 16px;
+  border-radius: 2px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.control {
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+}
+
+.control[aria-pressed='true'] {
+  background: #fff;
+  color: #002856;
+}
+
+.controlLeave {
+  border: 2px solid #de0a01;
+  background: #de0a01;
+  color: #fff;
+}
+
+.control:hover:not(:disabled) {
+  background: rgb(255 255 255 / 16%);
+}
+
+.control[aria-pressed='true']:hover:not(:disabled) {
+  background: #f4f4f4;
+}
+
+.controlLeave:hover:not(:disabled) {
+  border-color: #aa0000;
+  background: #aa0000;
+}
+
+.control:focus-visible,
+.controlLeave:focus-visible {
+  outline: 2px solid #0052d6;
+  outline-offset: 2px;
+}
+
+.control:disabled,
+.controlLeave:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.backgroundPanel {
+  position: absolute;
+  z-index: 3;
+  bottom: 76px;
+  left: 16px;
+  display: grid;
+  gap: 12px;
+  width: min(360px, calc(100% - 32px));
+  padding: 16px;
+  background: rgb(0 24 52 / 92%);
+  color: #fff;
+}
+
+.backgroundTitle,
+.backgroundHint {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.backgroundHint {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.backgroundOptions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.backgroundOption {
+  display: flex;
+  align-items: flex-end;
+  min-height: 56px;
+  padding: 6px 8px;
+  border: 2px solid rgb(255 255 255 / 40%);
+  border-radius: 2px;
+  background: #001834 center / cover no-repeat;
+  color: #fff;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
+  cursor: pointer;
+}
+
+.backgroundBlur {
+  background-image: radial-gradient(circle at 50% 40%, #8aa4c8, #2b4a75 70%);
+}
+
+.backgroundOption:hover:not(:disabled) {
+  border-color: #fff;
+}
+
+.backgroundOptionSelected {
+  border-color: #fff;
+  box-shadow: inset 0 0 0 2px #0052d6;
+}
+
+.backgroundOption:focus-visible {
+  outline: 2px solid #0052d6;
+  outline-offset: 2px;
+}
+
+.backgroundOption:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+@media (max-width: 800px) {
+  .title {
+    font-size: 32px;
+  }
+
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .stage {
+    min-height: 480px;
+  }
+
+  .zoomRoot {
+    min-height: 420px;
+  }
+}
+
+.stageHint {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.controlStatus {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 8px 12px;
+  color: #e8e8e8;
+  font-size: 14px;
+}
+
+.notice {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 12px 16px;
+  border: 1px solid #0052d6;
+  background: #e8f0fc;
+  color: #002856;
+}
